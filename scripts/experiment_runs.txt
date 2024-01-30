@@ -1,0 +1,168 @@
+Linux runs helper:
+
+For all datasets:
+
+python3 scripts/mult_run.py --python_name python3 --run_cases 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158
+
+python3 scripts/mult_run.py --python_name python3 --run_cases 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 -- gpu 2
+
+1 run simultaneously at each gpu - use 3 gpus:
+python3 scripts/mult_run.py --python_name python3 --run_cases 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 41 42 --gpu 0
+python3 scripts/mult_run.py --python_name python3 --run_cases 43 44 45 46 47 48 49 50 51 52 111 112 113 114 115 116 117 118 119 120 121 --gpu 1
+python3 scripts/mult_run.py --python_name python3 --run_cases 122 123 124 125 126 127 128 129 130 141 142 143 144 145 146 147 148 149 150 151 152 --gpu 2
+
+1 run simultaneously at each gpu - use 4 gpus:
+python3 scripts/mult_run.py --python_name python3 --run_cases 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 --gpu 0
+python3 scripts/mult_run.py --python_name python3 --run_cases 27 28 29 30 41 42 43 44 45 46 47 48 49 50 51 52 --gpu 1
+python3 scripts/mult_run.py --python_name python3 --run_cases 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 127 128 129 130 141 142 143 144 145 146 147 148 149 150 151 152 --gpu 3
+
+2 runs simultaneously at each gpu - use 4 gpus:
+python3 scripts/mult_run.py --python_name python3 --run_cases 11 12 13 14 15 16 17 18 --gpu 0
+python3 scripts/mult_run.py --python_name python3 --run_cases 19 20 21 22 23 24 25 26 --gpu 1
+python3 scripts/mult_run.py --python_name python3 --run_cases 27 28 29 30 41 42 43 44 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 45 46 47 48 49 50 51 52 --gpu 3
+python3 scripts/mult_run.py --python_name python3 --run_cases 111 112 113 114 115 116 117 118 --gpu 0
+python3 scripts/mult_run.py --python_name python3 --run_cases 119 120 121 122 123 124 125 126 --gpu 1
+python3 scripts/mult_run.py --python_name python3 --run_cases 127 128 129 130 141 142 143 144 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 145 146 147 148 149 150 151 152 --gpu 3
+
+4 runs simultaneously at each gpu - use 4 gpus:
+
+python3 scripts/mult_run.py --python_name python3 --run_cases 11 12 13 14 --gpu 0
+python3 scripts/mult_run.py --python_name python3 --run_cases 15 16 17 18 --gpu 1
+python3 scripts/mult_run.py --python_name python3 --run_cases 19 20 21 22 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 23 24 25 26 --gpu 3
+python3 scripts/mult_run.py --python_name python3 --run_cases 27 28 29 30 --gpu 0
+python3 scripts/mult_run.py --python_name python3 --run_cases 41 42 43 44 --gpu 1
+python3 scripts/mult_run.py --python_name python3 --run_cases 45 46 47 48 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 49 50 51 52 --gpu 3
+python3 scripts/mult_run.py --python_name python3 --run_cases 111 112 113 114 --gpu 0
+python3 scripts/mult_run.py --python_name python3 --run_cases 115 116 117 118 --gpu 1
+python3 scripts/mult_run.py --python_name python3 --run_cases 119 120 121 122 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 123 124 125 126 --gpu 3
+python3 scripts/mult_run.py --python_name python3 --run_cases 127 128 129 130 --gpu 0
+python3 scripts/mult_run.py --python_name python3 --run_cases 141 142 143 144 --gpu 1
+python3 scripts/mult_run.py --python_name python3 --run_cases 145 146 147 148 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 149 150 151 152 --gpu 3
+
+
+16 runs simultaneously at each gpu - use 4 gpus:
+
+python3 scripts/mult_run.py --python_name python3 --run_cases 11 --gpu 0
+python3 scripts/mult_run.py --python_name python3 --run_cases 12 --gpu 1
+python3 scripts/mult_run.py --python_name python3 --run_cases 13 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 14 --gpu 3
+python3 scripts/mult_run.py --python_name python3 --run_cases 15 --gpu 0
+python3 scripts/mult_run.py --python_name python3 --run_cases 16 --gpu 1
+python3 scripts/mult_run.py --python_name python3 --run_cases 17 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 18 --gpu 3
+python3 scripts/mult_run.py --python_name python3 --run_cases 19 --gpu 0
+python3 scripts/mult_run.py --python_name python3 --run_cases 20 --gpu 1
+python3 scripts/mult_run.py --python_name python3 --run_cases 21 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 22 --gpu 3
+python3 scripts/mult_run.py --python_name python3 --run_cases 23 --gpu 0
+python3 scripts/mult_run.py --python_name python3 --run_cases 24 --gpu 1
+python3 scripts/mult_run.py --python_name python3 --run_cases 25 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 26 --gpu 3
+
+python3 scripts/mult_run.py --python_name python3 --run_cases 111 --gpu 0
+python3 scripts/mult_run.py --python_name python3 --run_cases 112 --gpu 1
+python3 scripts/mult_run.py --python_name python3 --run_cases 113 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 114 --gpu 3
+python3 scripts/mult_run.py --python_name python3 --run_cases 115 --gpu 0
+python3 scripts/mult_run.py --python_name python3 --run_cases 116 --gpu 1
+python3 scripts/mult_run.py --python_name python3 --run_cases 117 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 118 --gpu 3
+python3 scripts/mult_run.py --python_name python3 --run_cases 119 --gpu 0
+python3 scripts/mult_run.py --python_name python3 --run_cases 120 --gpu 1
+python3 scripts/mult_run.py --python_name python3 --run_cases 121 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 122 --gpu 3
+python3 scripts/mult_run.py --python_name python3 --run_cases 123 --gpu 0
+python3 scripts/mult_run.py --python_name python3 --run_cases 124 --gpu 1
+python3 scripts/mult_run.py --python_name python3 --run_cases 125 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 126 --gpu 3
+
+
+Only for greek: 
+
+1 run simultaneously at each gpu - use 3 gpus:
+python3 scripts/mult_run.py --python_name python3 --run_cases 41 42 43 44 45 46 47 48 49 50 51 52 --gpu 0
+python3 scripts/mult_run.py --python_name python3 --run_cases 53 54 55 56 57 58 141 142 143 144 145 --gpu 1
+python3 scripts/mult_run.py --python_name python3 --run_cases 146 147 148 149 150 151 152 153 154 155 156 157 158 --gpu 2
+
+1 run simultaneously at each gpu - use 4 gpus:
+python3 scripts/mult_run.py --python_name python3 --run_cases 41 42 43 44 45 46 47 48 49 --gpu 0
+python3 scripts/mult_run.py --python_name python3 --run_cases 50 51 52 53 54 55 56 57 58 --gpu 1
+python3 scripts/mult_run.py --python_name python3 --run_cases 141 142 143 144 145 146 147 148 149 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 150 151 152 153 154 155 156 157 158 --gpu 3
+
+2 runs simultaneously at each gpu - use 4 gpus:
+python3 scripts/mult_run.py --python_name python3 --run_cases 41 42 43 44 45 --gpu 0
+python3 scripts/mult_run.py --python_name python3 --run_cases 46 47 48 49 50 --gpu 0
+python3 scripts/mult_run.py --python_name python3 --run_cases 51 52 53 54 55 --gpu 1
+python3 scripts/mult_run.py --python_name python3 --run_cases 56 57 58 --gpu 1
+python3 scripts/mult_run.py --python_name python3 --run_cases 141 142 143 144 145 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 146 147 148 149 150 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 151 152 153 154 155 --gpu 3
+python3 scripts/mult_run.py --python_name python3 --run_cases 156 157 158 --gpu 3
+
+
+python3 scripts/mult_run.py --python_name python3 --run_cases 43 44 --gpu 0
+python3 scripts/mult_run.py --python_name python3 --run_cases 45 47 --gpu 0
+python3 scripts/mult_run.py --python_name python3 --run_cases 48 49 --gpu 0
+python3 scripts/mult_run.py --python_name python3 --run_cases 50 53 --gpu 1
+python3 scripts/mult_run.py --python_name python3 --run_cases 54 55 --gpu 1
+python3 scripts/mult_run.py --python_name python3 --run_cases 57 58 --gpu 1
+python3 scripts/mult_run.py --python_name python3 --run_cases 145 148 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 149 150 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 153 154 --gpu 3
+python3 scripts/mult_run.py --python_name python3 --run_cases 155 157 --gpu 3
+python3 scripts/mult_run.py --python_name python3 --run_cases 158 --gpu 3
+
+python3 scripts/mult_run.py --python_name python3 --run_cases 43 44 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 45 47 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 48 49 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 50 53 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 54 55 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 57 58 --gpu 3
+python3 scripts/mult_run.py --python_name python3 --run_cases 145 148 --gpu 3
+python3 scripts/mult_run.py --python_name python3 --run_cases 149 150 --gpu 3
+python3 scripts/mult_run.py --python_name python3 --run_cases 153 154 --gpu 3
+python3 scripts/mult_run.py --python_name python3 --run_cases 155 157 --gpu 3
+python3 scripts/mult_run.py --python_name python3 --run_cases 158 --gpu 3
+
+python3 scripts/mult_run.py --python_name python3 --run_cases 45 47 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 48 49 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 50 53 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 54 55 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 57 58 --gpu 3
+python3 scripts/mult_run.py --python_name python3 --run_cases 148 149 --gpu 3
+python3 scripts/mult_run.py --python_name python3 --run_cases 150 154 --gpu 3
+python3 scripts/mult_run.py --python_name python3 --run_cases 155 157 --gpu 3
+python3 scripts/mult_run.py --python_name python3 --run_cases 158 --gpu 3
+
+
+python3 scripts/mult_run.py --python_name python3 --run_cases 47 48 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 49 50 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 53 54 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 55 57 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 58 148 --gpu 3
+python3 scripts/mult_run.py --python_name python3 --run_cases 149 150 --gpu 3
+python3 scripts/mult_run.py --python_name python3 --run_cases 154 155 --gpu 3
+python3 scripts/mult_run.py --python_name python3 --run_cases 157 158 --gpu 3
+
+python3 scripts/mult_run.py --python_name python3 --run_cases 49 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 58 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 158 --gpu 3
+
+python3 scripts/mult_run.py --python_name python3 --run_cases 201 202 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 203 204 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 211 212 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 213 214 --gpu 2
+python3 scripts/mult_run.py --python_name python3 --run_cases 221 222 --gpu 3
+python3 scripts/mult_run.py --python_name python3 --run_cases 223 224 --gpu 3
+python3 scripts/mult_run.py --python_name python3 --run_cases 231 232 --gpu 3
+python3 scripts/mult_run.py --python_name python3 --run_cases 233 234 --gpu 3
+
+
